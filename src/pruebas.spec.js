@@ -26,4 +26,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"NV");
     expect(totalizar.get_impuesto()).toEqual(0.08);
   });
+  it("Calculamos el impuesto de TX , ejemplo: generar(1000, 3, TX) => 0.0625", () => {
+    let totalizar = new totalizador(30000, 3,"TX");
+    expect(totalizar.get_impuesto()).toEqual(0.0625);
+  });
 });

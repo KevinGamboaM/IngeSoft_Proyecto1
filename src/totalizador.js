@@ -26,6 +26,8 @@ module.exports = class totalizador{
             return 0.0665;
         }else if(this.estado=="NV"){
             return 0.08;
+        }else if(this.estado=="TX"){
+            return 0.0625; 
         }             
 
     }
