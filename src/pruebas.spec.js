@@ -34,4 +34,9 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"AL");
     expect(totalizar.get_impuesto()).toEqual(0.04);
   });
+  it("Calculamos el impuesto de CA , ejemplo: generar(1000, 3, CA) => 0.0825", () => {
+    let totalizar = new totalizador(30000, 3,"CA");
+    expect(totalizar.get_impuesto()).toEqual(0.0825);
+  });
+
 });
