@@ -21,6 +21,11 @@ module.exports = class totalizador{
     get_precio_neto(){
         return this.cantidad * this.precio;
     }
+    get_impuesto(){
+        
+            return 0.0665;              
+
+    }
   
 }
   
