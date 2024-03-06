@@ -30,4 +30,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX");
     expect(totalizar.get_impuesto()).toEqual(0.0625);
   });
+  it("Calculamos el impuesto de AL , ejemplo: generar(1000, 3, AL) => 0.04", () => {
+    let totalizar = new totalizador(30000, 3,"AL");
+    expect(totalizar.get_impuesto()).toEqual(0.04);
+  });
 });
