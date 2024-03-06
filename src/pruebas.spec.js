@@ -66,4 +66,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Varios");
     expect(totalizar.get_impuesto_adicional()).toEqual(0);
   });
+  it("Calculamos el impuesto adicional para la categoria Alimentos, ejemplo: generar(30000, 3, TX, Alimentos) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Alimentos");
+    expect(totalizar.get_impuesto_adicional()).toEqual(0);
+  });
 });
