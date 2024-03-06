@@ -14,6 +14,9 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(5,20,"NV");
     expect(totalizar.get_estado()).toEqual("NV");
   });
-  
+  it("Calculamos el precio neto, ejemplo: generar(20, 3, NV) => 60", () => {
+    let totalizar = new totalizador(20, 3,"NV");
+    expect(totalizar.get_precio_neto()).toEqual(60);
+  });
  
 });
