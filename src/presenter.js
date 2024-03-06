@@ -10,11 +10,11 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const est = estado.value;
+  //const est = estado.value;
   
-  const totalizar = new totalizador(cantidad.value, precio.value);
+  const totalizar = new totalizador(cantidad.value, precio.value, estado.value);
 
-  div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + est + "</p>";
+  div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + totalizar.get_estado() + "</p>";
   
   
 });
