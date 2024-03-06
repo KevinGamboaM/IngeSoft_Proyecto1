@@ -35,8 +35,16 @@ module.exports = class totalizador{
         }               
 
     }
+    get_descuento(){
+        if(this.cantidad>=1000){
+            return 0.03;
+        }else{
+            return 0;
+        }          
+
+    }
     get_total(){
-        return this.get_precio_neto()+(this.get_precio_neto()*this.get_impuesto());
+        return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))+(this.get_precio_neto()*this.get_impuesto());
     }
   
 }
