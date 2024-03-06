@@ -10,7 +10,10 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(5,20);
     expect(totalizar.get_precio()).toEqual(20);
   });
-
+  it("Si genero el estado, me genera el estado ejemplo: generar(NV) => NV", () => {
+    let totalizar = new totalizador(5,20,"NV");
+    expect(totalizar.get_estado()).toEqual("NV");
+  });
   
  
 });
