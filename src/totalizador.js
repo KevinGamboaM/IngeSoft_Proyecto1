@@ -22,10 +22,11 @@ module.exports = class totalizador{
         return this.cantidad * this.precio;
     }
     get_impuesto(){
-        if(this.estado == "UT")
+        if(this.estado == "UT"){
             return 0.0665;
-        else 
-        return null              
+        }else if(this.estado=="NV"){
+            return 0.08;
+        }             
 
     }
   
