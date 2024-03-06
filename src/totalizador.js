@@ -22,17 +22,19 @@ module.exports = class totalizador{
         return this.cantidad * this.precio;
     }
     get_impuesto(){
+        var a = 0;
         if(this.estado == "UT"){
-            return 0.0665;
+            a = 0.0665;
         }else if(this.estado=="NV"){
-            return 0.08;
+            a = 0.08;
         }else if(this.estado=="TX"){
-            return 0.0625; 
+            a = 0.0625; 
         }else if(this.estado=="AL"){
-            return 0.04; 
+            a = 0.04; 
         }else if(this.estado=="CA"){
-            return 0.0825; 
+            a = 0.0825; 
         }               
+        return a;
 
     }
     get_descuento(){
