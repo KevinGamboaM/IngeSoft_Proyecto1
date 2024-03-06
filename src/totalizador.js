@@ -42,6 +42,8 @@ module.exports = class totalizador{
             return 0.05;
         }else if(this.cantidad>=7000 && this.cantidad < 10000){
             return 0.07;
+        }else if(this.cantidad>=10000){
+            return 0.1;
         }else{
             return 0;
         }          

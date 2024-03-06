@@ -54,4 +54,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(7000, 3,"TX");
     expect(totalizar.get_total()).toEqual(20842.5);
   });
+  it("Calculamos el precio total restandole el descuento de 10000 unidades., ejemplo: generar(10000, 3, TX) => ", () => {
+    let totalizar = new totalizador(10000, 3,"TX");
+    expect(totalizar.get_total()).toEqual(28875);
+  });
 });
