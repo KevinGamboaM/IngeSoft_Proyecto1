@@ -38,5 +38,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"CA");
     expect(totalizar.get_impuesto()).toEqual(0.0825);
   });
-
+  it("Calculamos el total solo con impuestos , ejemplo: generar(20, 3, TX) => ", () => {
+    let totalizar = new totalizador(20, 3,"TX");
+    expect(totalizar.get_total()).toEqual(63.75);
+  });
 });
