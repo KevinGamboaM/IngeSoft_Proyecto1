@@ -54,6 +54,9 @@ module.exports = class totalizador{
 
     }
     get_impuesto_adicional(){
+        if(this.categoria == "Bebidas alcoholicas"){
+            return 0.07;
+        }
         return 0;
     }
     get_total(){
