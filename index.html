@@ -6,13 +6,23 @@
       <input type="number" id="cantidad" /></br>
       <label for="precio">Precio:</label></br>
       <input type="number" id="precio" /></br>
-      <label for="estado">Estado:</label></br>
+      <label for="estado">Estado:</label>
       <select id="estado" name="estado">
-        <option value="UT">UT</option>
+        <option value="CA">CA</option>
         <option value="NV">NV</option>
         <option value="TX">TX</option>
         <option value="AL">AL</option>
-        <option value="CA">CA</option>
+        <option value="UT">UT</option>
+     </select>
+     <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria">
+        <option value="Varios">Varios</option>
+        <option value="Alimentos">Alimentos</option>
+        <option value="Bebidas alcoholicas">Bebidas alcoholicas</option>
+        <option value="Material de escritorio">Material de escritorio</option>
+        <option value="Muebles">Muebles</option>
+        <option value="Electronicos">Electronicos</option>
+        <option value="Vestimenta">Vestimenta</option>
      </select>
       <input type="submit" value="totalizar" id="totalizar-button" />
     </form>
@@ -21,6 +31,7 @@
     <div id="resultado-div3"></div>
     <div id="resultado-div5"></div>
     <div id="resultado-div4"></div>
+    
     
     <script type="module" src="./src/presenter.js"></script>
   </body>
