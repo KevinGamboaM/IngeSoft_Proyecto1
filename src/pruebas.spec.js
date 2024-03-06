@@ -62,4 +62,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX");
     expect(totalizar.get_total()).toEqual(82125);
   });
+  it("Calculamos el impuesto adicional para la categoria varios, ejemplo: generar(30000, 3, TX, Varios) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Varios");
+    expect(totalizar.get_impuesto_adicional()).toEqual(0);
+  });
 });
