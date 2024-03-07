@@ -158,4 +158,5 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"TX","Varios",55);
     expect(totalizar.get_total()).toEqual(183.75);
   });
+ 
 });
