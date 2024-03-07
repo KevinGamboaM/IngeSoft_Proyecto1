@@ -162,4 +162,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30, 3,"TX","Varios", 5, "Normal");
     expect(totalizar.get_descuento_costo_envio()).toEqual(0);
   });
+  it("Calculamos el descuento para un cliente recurrente, ejemplo: generar(30, 3, TX, Varios, 5, Recurrente) => ", () => {
+    let totalizar = new totalizador(30, 3,"TX","Varios", 5, "Recurrente");
+    expect(totalizar.get_descuento_costo_envio()).toEqual(0.005);
+  });
 });

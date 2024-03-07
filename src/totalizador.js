@@ -103,7 +103,9 @@ module.exports = class totalizador{
         return 9;
     }
     get_descuento_costo_envio(){
-        
+        if(this.cliente=="Recurrente"){
+            return 0.005;
+        }
         return 0;
     }
     
