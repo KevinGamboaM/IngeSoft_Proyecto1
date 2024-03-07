@@ -9,7 +9,11 @@ module.exports = class totalizador{
     }
   
     get_cantidad(){
-        return this.cantidad
+        if(this.cantidad<=0){
+            return null;
+        }else{
+            return this.cantidad
+        }
     }
 
 
