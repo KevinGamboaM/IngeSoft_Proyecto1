@@ -18,7 +18,11 @@ module.exports = class totalizador{
 
 
     get_precio(){
-        return this.precio;
+        if(this.precio<=0){
+            return null;
+        }else{
+            return this.precio;
+        }
     }
 
     get_estado(){

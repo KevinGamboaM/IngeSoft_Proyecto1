@@ -194,4 +194,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(-5, 3,"TX","Electronicos", 5, "Especial");
     expect(totalizar.get_cantidad()).toEqual(null);
   });
+  it("Retornar NULL si el precio ingresado es menor o igual a cero ejemplo: generar(25, -3, TX, Electronicos, 5, Especial) => ", () => {
+    let totalizar = new totalizador(25, -3,"TX","Electronicos", 5, "Especial");
+    expect(totalizar.get_precio()).toEqual(null);
+  });
 });
