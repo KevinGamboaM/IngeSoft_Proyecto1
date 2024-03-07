@@ -98,4 +98,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Alimentos");
     expect(totalizar.get_descuento_adicional()).toEqual(0.02);
   });
+  it("Calculamos el descuento adicional para la categoria Bebidas alcoholicas, ejemplo: generar(30000, 3, TX, Bebidas alcoholicas) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Bebidas alcoholicas");
+    expect(totalizar.get_descuento_adicional()).toEqual(0);
+  });
 });
