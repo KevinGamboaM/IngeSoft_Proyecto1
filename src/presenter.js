@@ -16,11 +16,11 @@ const div6 = document.querySelector("#resultado-div6");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const p = peso.value;
+ // const p = peso.value;
   
-  const totalizar = new totalizador(cantidad.value, precio.value, estado.value,categoria.value);
+  const totalizar = new totalizador(cantidad.value, precio.value, estado.value, categoria.value, peso.value);
 
-  div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + totalizar.get_estado() + " | Categoria: " + totalizar.get_categoria() + " | Peso: " + p + "</p>";
+  div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + totalizar.get_estado() + " | Categoria: " + totalizar.get_categoria() + " | Peso: " + totalizar.get_peso() + "</p>";
   div2.innerHTML = "<p>Precio neto: " + totalizar.get_precio_neto() + "</p>";
   div3.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)-->" + totalizar.get_precio_neto()*totalizar.get_impuesto() + "</p>";
   div5.innerHTML = "<p>Descuento(" + parseInt(totalizar.get_descuento()*100) + "%)" + totalizar.get_precio_neto() * totalizar.get_descuento() + "</p>";

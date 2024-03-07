@@ -1,9 +1,10 @@
 module.exports = class totalizador{
-    constructor(cantidad, precio, estado, categoria){
+    constructor(cantidad, precio, estado, categoria, peso){
         this.cantidad = cantidad;
         this.precio = precio;
         this.estado = estado;
         this.categoria = categoria;
+        this.peso = peso;
     }
   
     get_cantidad(){
@@ -20,6 +21,9 @@ module.exports = class totalizador{
     }
     get_categoria(){
         return this.categoria;
+    }
+    get_peso(){
+        return this.peso;
     }
     get_precio_neto(){
         return this.cantidad * this.precio;
