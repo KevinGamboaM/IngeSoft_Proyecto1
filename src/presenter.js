@@ -20,7 +20,9 @@ form.addEventListener("submit", (event) => {
  
   
   const totalizar = new totalizador(cantidad.value, precio.value, estado.value, categoria.value, peso.value, cliente.value);
-
+  if(totalizar.get_cantidad()==null){
+    div2.innerHTML = "<p style=\"color: red;\">ERROR! LA CANTIDAD INGRESADA ES CERO O NEGATIVA.</p>";
+  }else{
   div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + totalizar.get_estado() + " | Categoria: " + totalizar.get_categoria() + " | Peso: " + totalizar.get_peso() + " | Tipo de cliente: " + totalizar.get_cliente() + "</p>";
   div2.innerHTML = "<p>Precio neto: " + totalizar.get_precio_neto() + "</p>";
   div3.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)-->" + totalizar.get_precio_neto()*totalizar.get_impuesto() + "</p>";
@@ -31,5 +33,5 @@ form.addEventListener("submit", (event) => {
                    + "╠══╣  Descuento del costo de envio("+totalizar.get_descuento_costo_envio()*100+"%):"+ totalizar.get_cantidad()*totalizar.get_costo_envio()*totalizar.get_descuento_costo_envio()
                    + "╠══╣  Descuento Tipo cliente, categoria y precio neto:"+ totalizar.get_descuento_tipo_cliente() +"$</p>";
   div4.innerHTML = "<p>PRECIO TOTAL: " + totalizar.get_total() + "</p>";
-  
+  }
 });
