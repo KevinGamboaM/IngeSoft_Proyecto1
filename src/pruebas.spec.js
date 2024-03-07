@@ -39,27 +39,27 @@ describe("Totalizador", () =>{
     expect(totalizar.get_impuesto()).toEqual(0.0825);
   });
   it("Calculamos el total solo con impuestos , ejemplo: generar(20, 3, TX) => ", () => {
-    let totalizar = new totalizador(20, 3,"TX");
+    let totalizar = new totalizador(20, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(63.75);
   });
   it("Calculamos el precio total restandole el descuento de 1000 unidades., ejemplo: generar(1000, 3, TX) => ", () => {
-    let totalizar = new totalizador(1000, 3,"TX");
+    let totalizar = new totalizador(1000, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(3097.5);
   });
   it("Calculamos el precio total restandole el descuento de 3000 unidades., ejemplo: generar(3000, 3, TX) => ", () => {
-    let totalizar = new totalizador(3000, 3,"TX");
+    let totalizar = new totalizador(3000, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(9112.5);
   });
   it("Calculamos el precio total restandole el descuento de 7000 unidades., ejemplo: generar(7000, 3, TX) => ", () => {
-    let totalizar = new totalizador(7000, 3,"TX");
+    let totalizar = new totalizador(7000, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(20842.5);
   });
   it("Calculamos el precio total restandole el descuento de 10000 unidades., ejemplo: generar(10000, 3, TX) => ", () => {
-    let totalizar = new totalizador(10000, 3,"TX");
+    let totalizar = new totalizador(10000, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(28875);
   });
   it("Calculamos el precio total restandole el descuento de 30000 unidades., ejemplo: generar(30000, 3, TX) => ", () => {
-    let totalizar = new totalizador(30000, 3,"TX");
+    let totalizar = new totalizador(30000, 3,"TX","Varios",5);
     expect(totalizar.get_total()).toEqual(82125);
   });
   it("Calculamos el impuesto adicional para la categoria varios, ejemplo: generar(30000, 3, TX, Varios) => ", () => {
@@ -91,7 +91,7 @@ describe("Totalizador", () =>{
     expect(totalizar.get_impuesto_adicional()).toEqual(0.02);
   });
   it("Calculamos el precio total con el impuesto adicional, ejemplo: generar(20, 3, TX, Vestimenta) => ", () => {
-    let totalizar = new totalizador(20, 3,"TX","Vestimenta");
+    let totalizar = new totalizador(20, 3,"TX","Vestimenta",5);
     expect(totalizar.get_total()).toEqual(64.95);
   });
   it("Calculamos el descuento adicional para la categoria Alimentos, ejemplo: generar(30000, 3, TX, Alimentos) => ", () => {
@@ -123,7 +123,7 @@ describe("Totalizador", () =>{
     expect(totalizar.get_descuento_adicional()).toEqual(0);
   });
   it("Calculamos el precio total con el descuento adicional, ejemplo: generar(20, 3, TX, Alimentos) => ", () => {
-    let totalizar = new totalizador(20, 3,"TX","Alimentos");
+    let totalizar = new totalizador(20, 3,"TX","Alimentos",5);
     expect(totalizar.get_total()).toEqual(62.55);
   });
   it("Calculamos el costo de envio para el peso de 0-10, ejemplo: generar(30000, 3, TX, Varios, 5) => ", () => {
@@ -153,5 +153,9 @@ describe("Totalizador", () =>{
   it("Calculamos el costo de envio para el peso de mayor a 200, ejemplo: generar(30000, 3, TX, Varios, 255) => ", () => {
     let totalizar = new totalizador(30000, 3,"TX","Varios",255);
     expect(totalizar.get_costo_envio()).toEqual(9);
+  });
+  it("Calculamos precio total mas el costo de envio, ejemplo: generar(20, 3, TX, Varios, 55) => ", () => {
+    let totalizar = new totalizador(20, 3,"TX","Varios",55);
+    expect(totalizar.get_total()).toEqual(183.75);
   });
 });
