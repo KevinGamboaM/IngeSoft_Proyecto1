@@ -32,7 +32,11 @@ module.exports = class totalizador{
         return this.categoria;
     }
     get_peso(){
-        return this.peso;
+        if(this.peso<0){
+            return null;
+        }else{
+            return this.peso;
+        }
     }
     get_cliente(){
         return this.cliente;

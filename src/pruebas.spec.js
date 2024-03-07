@@ -198,4 +198,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(25, -3,"TX","Electronicos", 5, "Especial");
     expect(totalizar.get_precio()).toEqual(null);
   });
+  it("Retornar NULL si el peso ingresado es menor a cero ejemplo: generar(25, 3, TX, Electronicos, -5, Especial) => ", () => {
+    let totalizar = new totalizador(25, 3,"TX","Electronicos", -5, "Especial");
+    expect(totalizar.get_peso()).toEqual(null);
+  });
 });
