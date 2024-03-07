@@ -74,4 +74,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Bebidas alcoholicas");
     expect(totalizar.get_impuesto_adicional()).toEqual(0.07);
   });
+  it("Calculamos el impuesto adicional para la categoria Material de escritorio, ejemplo: generar(30000, 3, TX, Material de escritorio) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Material de escritorio");
+    expect(totalizar.get_impuesto_adicional()).toEqual(0);
+  });
 });
