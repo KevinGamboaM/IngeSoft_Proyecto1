@@ -84,7 +84,9 @@ module.exports = class totalizador{
     }
     get_costo_envio(){
         if(this.peso<=10){
-            return this.cantidad * 0;
+            return 0;
+        }if(this.peso<=20){
+            return 3.5;
         }
     }
     
