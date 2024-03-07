@@ -112,6 +112,12 @@ module.exports = class totalizador{
         }
         return 0;
     }
+    get_descuento_tipo_cliente(){
+        if(this.cliente=="Recurrente" && this.get_precio_neto()>3000 && this.categoria == "Alimentos"){
+            return 100;
+        }
+        return 0;
+    }
     
     
     get_total(){

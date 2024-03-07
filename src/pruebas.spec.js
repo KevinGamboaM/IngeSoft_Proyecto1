@@ -178,4 +178,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"TX","Varios", 55, "Especial");
     expect(totalizar.get_total()).toEqual(181.95);
   });
+  it("Calculamos el descuento para un cliente recurrente con categoria alimentos y un precio neto mayor a 3000, ejemplo: generar(1500, 3, TX, Alimentos, 5, Recurrente) => ", () => {
+    let totalizar = new totalizador(1500, 3,"TX","Alimentos", 5, "Recurrente");
+    expect(totalizar.get_descuento_tipo_cliente()).toEqual(100);
+  });
 });
