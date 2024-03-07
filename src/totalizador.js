@@ -68,8 +68,11 @@ module.exports = class totalizador{
         }
         return 0;
     }
+    
     get_total(){
-        return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))+(this.get_precio_neto()*this.get_impuesto());
+        return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))
+        + (this.get_precio_neto()*this.get_impuesto())
+        + (this.get_precio_neto()*this.get_impuesto_adicional());
     }
   
 }

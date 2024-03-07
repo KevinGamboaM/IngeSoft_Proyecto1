@@ -90,4 +90,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Vestimenta");
     expect(totalizar.get_impuesto_adicional()).toEqual(0.02);
   });
+  it("Calculamos el precio total con el impuesto adicional, ejemplo: generar(20, 3, TX, Vestimenta) => ", () => {
+    let totalizar = new totalizador(20, 3,"TX","Vestimenta");
+    expect(totalizar.get_total()).toEqual(64.95);
+  });
 });
