@@ -174,4 +174,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30, 3,"TX","Varios", 5, "Especial");
     expect(totalizar.get_descuento_costo_envio()).toEqual(0.015);
   });
+  it("Calculamos precio total mas el descuento del costo de envio segun el tipo de cliente, ejemplo: generar(20, 3, TX, Varios, 55, Especial) => ", () => {
+    let totalizar = new totalizador(20, 3,"TX","Varios", 55, "Especial");
+    expect(totalizar.get_total()).toEqual(181.95);
+  });
 });
