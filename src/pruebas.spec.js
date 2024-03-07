@@ -158,5 +158,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"TX","Varios",55);
     expect(totalizar.get_total()).toEqual(183.75);
   });
- 
+  it("Calculamos el descuento para un cliente normal, ejemplo: generar(30, 3, TX, Varios, 5, Normal) => ", () => {
+    let totalizar = new totalizador(30, 3,"TX","Varios", 5, "Normal");
+    expect(totalizar.get_descuento_costo_envio()).toEqual(0);
+  });
 });

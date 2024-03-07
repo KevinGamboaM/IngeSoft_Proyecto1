@@ -102,6 +102,10 @@ module.exports = class totalizador{
         }
         return 9;
     }
+    get_descuento_costo_envio(){
+        
+        return 0;
+    }
     
     
     get_total(){
