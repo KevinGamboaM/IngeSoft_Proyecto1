@@ -122,4 +122,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Varios");
     expect(totalizar.get_descuento_adicional()).toEqual(0);
   });
+  it("Calculamos el precio total con el descuento adicional, ejemplo: generar(20, 3, TX, Alimentos) => ", () => {
+    let totalizar = new totalizador(20, 3,"TX","Alimentos");
+    expect(totalizar.get_total()).toEqual(62.55);
+  });
 });

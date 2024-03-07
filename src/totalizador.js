@@ -83,7 +83,8 @@ module.exports = class totalizador{
     get_total(){
         return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))
         + (this.get_precio_neto()*this.get_impuesto())
-        + (this.get_precio_neto()*this.get_impuesto_adicional());
+        + (this.get_precio_neto()*this.get_impuesto_adicional())
+        -(this.get_precio_neto()*this.get_descuento_adicional());
     }
   
 }
