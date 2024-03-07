@@ -68,6 +68,13 @@ module.exports = class totalizador{
         }
         return 0;
     }
+    get_descuento_adicional(){
+        if(this.categoria == "Alimentos"){
+            return 0.02;
+        }
+        return 0;
+    }
+    
     
     get_total(){
         return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))

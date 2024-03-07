@@ -23,7 +23,8 @@ form.addEventListener("submit", (event) => {
   div2.innerHTML = "<p>Precio neto: " + totalizar.get_precio_neto() + "</p>";
   div3.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)-->" + totalizar.get_precio_neto()*totalizar.get_impuesto() + "</p>";
   div5.innerHTML = "<p>Descuento(" + parseInt(totalizar.get_descuento()*100) + "%)" + totalizar.get_precio_neto() * totalizar.get_descuento() + "</p>";
-  div6.innerHTML = "<p>Impuesto adicional para " + totalizar.get_categoria() + "(" + parseInt(totalizar.get_impuesto_adicional()*100) + "%)-->" + totalizar.get_precio_neto()*totalizar.get_impuesto_adicional() + "</p>";
+  div6.innerHTML = "<p>Impuesto adicional para " + totalizar.get_categoria() + "(" + parseInt(totalizar.get_impuesto_adicional()*100) + "%)-->" + totalizar.get_precio_neto()*totalizar.get_impuesto_adicional()
+                   + " |Descuento adicional(" + parseInt(totalizar.get_descuento_adicional()*100) + "%)" + totalizar.get_precio_neto() * totalizar.get_descuento_adicional() +"</p>";
   div4.innerHTML = "<p>PRECIO TOTAL: " + totalizar.get_total() + "</p>";
   
 });
