@@ -107,6 +107,8 @@ module.exports = class totalizador{
             return 0.005;
         }else if(this.cliente=="Antiguo Recurrente"){
             return 0.01;
+        }else if(this.cliente=="Especial"){
+            return 0.015;
         }
         return 0;
     }
