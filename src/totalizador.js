@@ -115,6 +115,8 @@ module.exports = class totalizador{
     get_descuento_tipo_cliente(){
         if(this.cliente=="Recurrente" && this.get_precio_neto()>3000 && this.categoria == "Alimentos"){
             return 100;
+        }else if(this.cliente=="Especial" && this.get_precio_neto()>7000 && this.categoria == "Electronicos"){
+            return 200;
         }
         return 0;
     }
