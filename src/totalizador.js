@@ -61,6 +61,8 @@ module.exports = class totalizador{
             return 0.07;
         }else if(this.categoria == "Muebles"){
             return 0.03;
+        }else if(this.categoria == "Electronicos"){
+            return 0.04;
         }
         return 0;
     }

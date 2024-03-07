@@ -82,4 +82,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Muebles");
     expect(totalizar.get_impuesto_adicional()).toEqual(0.03);
   });
+  it("Calculamos el impuesto adicional para la categoria Electronicos, ejemplo: generar(30000, 3, TX, Electronicos) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Electronicos");
+    expect(totalizar.get_impuesto_adicional()).toEqual(0.04);
+  });
 });
