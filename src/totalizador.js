@@ -91,6 +91,8 @@ module.exports = class totalizador{
             return 5;
         }if(this.peso<=80){
             return 6;
+        }if(this.peso<=100){
+            return 6.5;
         }
     }
     
