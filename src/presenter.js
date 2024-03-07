@@ -24,6 +24,8 @@ form.addEventListener("submit", (event) => {
     div2.innerHTML = "<p style=\"color: red;\">ERROR! LA CANTIDAD INGRESADA ES CERO O NEGATIVA.</p>";
   }else if(totalizar.get_precio()==null){
     div2.innerHTML = "<p style=\"color: red;\">ERROR! EL PRECIO INGRESADO ES CERO O NEGATIVO.</p>";
+  }else if(totalizar.get_peso()==null){
+    div2.innerHTML = "<p style=\"color: red;\">ERROR! EL PESO INGRESADO ES CERO O NEGATIVO.</p>";
   }else{
   div.innerHTML = "<p>Cantidad: " + totalizar.get_cantidad() + " | Precio: " + totalizar.get_precio() + " | Estado: " + totalizar.get_estado() + " | Categoria: " + totalizar.get_categoria() + " | Peso: " + totalizar.get_peso() + " | Tipo de cliente: " + totalizar.get_cliente() + "</p>";
   div2.innerHTML = "<p>Precio neto: " + totalizar.get_precio_neto() + "</p>";
