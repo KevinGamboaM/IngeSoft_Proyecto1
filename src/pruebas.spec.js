@@ -126,4 +126,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"TX","Alimentos");
     expect(totalizar.get_total()).toEqual(62.55);
   });
+  it("Calculamos el costo de envio para el peso de 0-10, ejemplo: generar(30000, 3, TX, Varios, 5) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Varios",5);
+    expect(totalizar.get_costo_envio()).toEqual(0);
+  });
 });

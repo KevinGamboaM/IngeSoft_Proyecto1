@@ -82,7 +82,11 @@ module.exports = class totalizador{
         }
         return 0;
     }
-    
+    get_costo_envio(){
+        if(this.peso<=10){
+            return this.cantidad * 0;
+        }
+    }
     
     get_total(){
         return (this.get_precio_neto()-(this.get_precio_neto()*this.get_descuento()))
