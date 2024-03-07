@@ -71,6 +71,8 @@ module.exports = class totalizador{
     get_descuento_adicional(){
         if(this.categoria == "Alimentos"){
             return 0.02;
+        }else if(this.categoria == "Material de escritorio"){
+            return 0.015;
         }
         return 0;
     }
