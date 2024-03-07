@@ -128,7 +128,8 @@ module.exports = class totalizador{
         + (this.get_precio_neto()*this.get_impuesto_adicional())
         -(this.get_precio_neto()*this.get_descuento_adicional())
         +(this.get_costo_envio()*this.get_cantidad())
-        -(this.get_costo_envio()*this.get_cantidad()*this.get_descuento_costo_envio());
+        -(this.get_costo_envio()*this.get_cantidad()*this.get_descuento_costo_envio())
+        -this.get_descuento_tipo_cliente();
     }
   
 }

@@ -186,4 +186,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(2500, 3,"TX","Electronicos", 5, "Especial");
     expect(totalizar.get_descuento_tipo_cliente()).toEqual(200);
   });
+  it("Calculamos precio total menos el descuento del tipo de cliente, precio neto y categoria, ejemplo: generar(2500, 3, TX, Electronicos, 5, Especial) => ", () => {
+    let totalizar = new totalizador(2500, 3,"TX","Electronicos", 5, "Especial");
+    expect(totalizar.get_total()).toEqual(7768.75);
+  });
 });
