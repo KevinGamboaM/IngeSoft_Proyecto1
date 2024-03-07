@@ -110,4 +110,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Muebles");
     expect(totalizar.get_descuento_adicional()).toEqual(0);
   });
+  it("Calculamos el descuento adicional para la categoria Electronicos, ejemplo: generar(30000, 3, TX, Electronicos) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Electronicos");
+    expect(totalizar.get_descuento_adicional()).toEqual(0.01);
+  });
 });

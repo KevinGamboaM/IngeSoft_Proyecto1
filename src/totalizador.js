@@ -73,6 +73,8 @@ module.exports = class totalizador{
             return 0.02;
         }else if(this.categoria == "Material de escritorio"){
             return 0.015;
+        }else if(this.categoria == "Electronicos"){
+            return 0.01;
         }
         return 0;
     }
