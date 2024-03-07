@@ -59,6 +59,8 @@ module.exports = class totalizador{
     get_impuesto_adicional(){
         if(this.categoria == "Bebidas alcoholicas"){
             return 0.07;
+        }else if(this.categoria == "Muebles"){
+            return 0.03;
         }
         return 0;
     }

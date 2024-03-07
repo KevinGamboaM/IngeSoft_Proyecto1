@@ -78,4 +78,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"TX","Material de escritorio");
     expect(totalizar.get_impuesto_adicional()).toEqual(0);
   });
+  it("Calculamos el impuesto adicional para la categoria Muebles, ejemplo: generar(30000, 3, TX, Muebles) => ", () => {
+    let totalizar = new totalizador(30000, 3,"TX","Muebles");
+    expect(totalizar.get_impuesto_adicional()).toEqual(0.03);
+  });
 });
